@@ -18,11 +18,14 @@ app.config['SESSION_COOKIE_SAMESITE'] = 'None'
 app.config['SESSION_COOKIE_HTTPONLY'] = True
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(hours=1)
 
-CORS(app, supports_credentials=True, origins=[
-    "http://localhost:3000",
-    "https://salesforce-validation-manager-front-sooty.vercel.app",
-    "https://salesforce-validation-manager-six.vercel.app"
-])
+CORS(
+    app,
+    supports_credentials=True,
+    origins=[
+        "http://localhost:3000",
+        "https://salesforce-validation-manager-gx34u1vmd-sachin-projects2.vercel.app"
+    ]
+)
 
 sf_client_id = os.getenv('SALESFORCE_CLIENT_ID')
 sf_client_secret = os.getenv('SALESFORCE_CLIENT_SECRET')
