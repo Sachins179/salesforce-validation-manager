@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 
-const BASE_URL = 'http://localhost:5000';
+const BASE_URL =
+  process.env.REACT_APP_API_URL ||
+  'https://salesforce-validation-manager-w8u6.onrender.com';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
